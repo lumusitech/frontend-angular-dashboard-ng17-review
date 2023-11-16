@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './dashboard.component.html',
-  styles: ``
+  styles: ``,
 })
-export class DashboardComponent {
-
-}
+export default class DashboardComponent {}

@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
+  selector: 'dashboard-defer-options',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './defer-options.component.html',
-  styles: ``
+  styles: ``,
 })
-export class DeferOptionsComponent {
-
-}
+export default class DeferOptionsComponent {}

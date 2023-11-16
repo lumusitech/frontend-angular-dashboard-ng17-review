@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
+  selector: 'dashboard-users',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './users.component.html',
-  styles: ``
+  styles: ``,
 })
-export class UsersComponent {
-
-}
+export default class UsersComponent {}

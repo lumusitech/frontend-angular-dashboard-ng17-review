@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
+  selector: 'dashboard-view-transition',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './view-transition.component.html',
-  styles: ``
+  styles: ``,
 })
-export class ViewTransitionComponent {
-
-}
+export default class ViewTransitionComponent {}

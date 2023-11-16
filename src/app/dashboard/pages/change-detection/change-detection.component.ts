@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
+  selector: 'dashboard-change-detection',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './change-detection.component.html',
-  styles: ``
+  styles: ``,
 })
-export class ChangeDetectionComponent {
-
-}
+export default class ChangeDetectionComponent {}
