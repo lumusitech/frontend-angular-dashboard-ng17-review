@@ -13,12 +13,10 @@ import { TitleComponent } from '../../../shared/title/title.component';
   imports: [CommonModule, TitleComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="animate__animated animate__fadeIn">
-      <app-title [title]="currentFramework()" />
+    <app-title [title]="currentFramework()" />
 
-      <pre>{{ frameworkAsSignal() | json }}</pre>
-      <pre>{{ frameworkAsProperty | json }}</pre>
-    </div>
+    <pre>{{ frameworkAsSignal() | json }}</pre>
+    <pre>{{ frameworkAsProperty | json }}</pre>
   `,
   styles: ``,
 })

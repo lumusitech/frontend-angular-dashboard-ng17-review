@@ -1,63 +1,61 @@
-<div class="animate__animated animate__fadeIn">
-  <app-title title="Control Flow" withShadow />
+<app-title title="Control Flow" withShadow />
 
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
-    <!-- @if -->
-    <div class="bg-white rounded shadow p-10">
-      <h2 class="text-2xl font-bold mb-5">if: {{ showContent() }}</h2>
-      <button
-        (click)="toggleContent()"
-        class="p-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600 transition active:bg-blue-800"
-      >
-        click me!
-      </button>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+  <!-- @if -->
+  <div class="bg-white rounded shadow p-10">
+    <h2 class="text-2xl font-bold mb-5">if: {{ showContent() }}</h2>
+    <button
+      (click)="toggleContent()"
+      class="p-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600 transition active:bg-blue-800"
+    >
+      click me!
+    </button>
 
-      @if (showContent()) {
-      <p class="mt-2">Hi world!</p>
-      } @else {
-      <p class="mt-2">*********</p>
-      }
-    </div>
+    @if (showContent()) {
+    <p class="mt-2">Hi world!</p>
+    } @else {
+    <p class="mt-2">*********</p>
+    }
+  </div>
 
-    <!-- @switch -->
-    <div class="bg-white rounded shadow p-10">
-      <h2 class="text-2xl font-bold mb-5">switch: {{ grade() }}</h2>
-      @switch (grade()) { @case ('A') {
-      <p>Up to 90</p>
-      } @case ('B') {
-      <p>Up to 80</p>
-      } @default {
-      <p>Reprobed</p>
-      } }
-    </div>
+  <!-- @switch -->
+  <div class="bg-white rounded shadow p-10">
+    <h2 class="text-2xl font-bold mb-5">switch: {{ grade() }}</h2>
+    @switch (grade()) { @case ('A') {
+    <p>Up to 90</p>
+    } @case ('B') {
+    <p>Up to 80</p>
+    } @default {
+    <p>Reprobed</p>
+    } }
+  </div>
 
-    <!-- @for -->
-    <div class="bg-white rounded shadow p-10">
-      <ul class="p-2">
-        @for (framework of frameworks(); track framework; let i = $index, last =
-        $last, first = $first, even = $even, odd = $odd, count = $count) {
-        <li
-          class="p-2 rounded mb-1"
-          [class]="{
+  <!-- @for -->
+  <div class="bg-white rounded shadow p-10">
+    <ul class="p-2">
+      @for (framework of frameworks(); track framework; let i = $index, last =
+      $last, first = $first, even = $even, odd = $odd, count = $count) {
+      <li
+        class="p-2 rounded mb-1"
+        [class]="{
             'bg-red-100': even && !first && !last,
             'bg-pink-100': odd && !first && !last,
             'bg-blue-100': first || last,
           }"
-        >
-          {{ i + 1 }}/{{ count }}-{{ framework }}
-        </li>
-        }
-      </ul>
-    </div>
+      >
+        {{ i + 1 }}/{{ count }}-{{ framework }}
+      </li>
+      }
+    </ul>
+  </div>
 
-    <div class="bg-white rounded shadow p-10">
-      <ul>
-        @for (framework of frameworks2(); track $index) {
-        <li>{{ framework }}</li>
-        } @empty {
-        <li>No frameworks</li>
-        }
-      </ul>
-    </div>
-  </section>
-</div>
+  <div class="bg-white rounded shadow p-10">
+    <ul>
+      @for (framework of frameworks2(); track $index) {
+      <li>{{ framework }}</li>
+      } @empty {
+      <li>No frameworks</li>
+      }
+    </ul>
+  </div>
+</section>

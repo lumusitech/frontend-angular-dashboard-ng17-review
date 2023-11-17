@@ -1,108 +1,106 @@
-<div class="animate__animated animate__fadeIn">
-  <app-title title="Defer Triggers" withShadow />
+<app-title title="Defer Triggers" withShadow />
 
-  <section>
-    <h1 class="text-xl">Interactions</h1>
-    <hr class="my-2" />
+<section>
+  <h1 class="text-xl">Interactions</h1>
+  <hr class="my-2" />
 
-    @defer (on interaction) {
-    <shared-heavy-loaders-fast cssClass="bg-blue-500 h-20 p-2 rounded shadow">
-      <span>On Interaction</span>
-    </shared-heavy-loaders-fast>
-    } @placeholder {
-    <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
-      click on div for loading
-    </div>
-    }
-  </section>
+  @defer (on interaction) {
+  <shared-heavy-loaders-fast cssClass="bg-blue-500 h-20 p-2 rounded shadow">
+    <span>On Interaction</span>
+  </shared-heavy-loaders-fast>
+  } @placeholder {
+  <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
+    click on div for loading
+  </div>
+  }
+</section>
 
-  <section>
-    <hr class="my-2" />
+<section>
+  <hr class="my-2" />
 
-    <button
-      #btnInteraction
-      class="p-2 bg-blue-500 hover:bg-blue-700 transition-all text-white rounded my-2"
-    >
-      click me
-    </button>
+  <button
+    #btnInteraction
+    class="p-2 bg-blue-500 hover:bg-blue-700 transition-all text-white rounded my-2"
+  >
+    click me
+  </button>
 
-    @defer (on interaction(btnInteraction)) {
-    <shared-heavy-loaders-fast cssClass="bg-blue-500 h-20 p-2 rounded shadow">
-      <span>On Interaction button</span>
-    </shared-heavy-loaders-fast>
-    } @placeholder {
-    <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
-      Placeholder div
-    </div>
-    }
-  </section>
+  @defer (on interaction(btnInteraction)) {
+  <shared-heavy-loaders-fast cssClass="bg-blue-500 h-20 p-2 rounded shadow">
+    <span>On Interaction button</span>
+  </shared-heavy-loaders-fast>
+  } @placeholder {
+  <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
+    Placeholder div
+  </div>
+  }
+</section>
 
-  <section>
-    <hr class="my-2" />
+<section>
+  <hr class="my-2" />
 
-    @defer (on hover) {
-    <shared-heavy-loaders-fast cssClass="bg-blue-500 h-20 p-2 rounded shadow">
-      <span>On Hover</span>
-    </shared-heavy-loaders-fast>
-    } @placeholder {
-    <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
-      Hover here to load
-    </div>
-    }
-  </section>
+  @defer (on hover) {
+  <shared-heavy-loaders-fast cssClass="bg-blue-500 h-20 p-2 rounded shadow">
+    <span>On Hover</span>
+  </shared-heavy-loaders-fast>
+  } @placeholder {
+  <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
+    Hover here to load
+  </div>
+  }
+</section>
 
-  <section>
-    <hr class="my-2" />
+<section>
+  <hr class="my-2" />
 
-    @defer (on hover(btnInteraction)) {
-    <shared-heavy-loaders-fast cssClass="bg-blue-500 h-20 p-2 rounded shadow">
-      <span>On Hover button</span>
-    </shared-heavy-loaders-fast>
-    } @placeholder {
-    <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
-      Hover button to load
-    </div>
-    }
-  </section>
+  @defer (on hover(btnInteraction)) {
+  <shared-heavy-loaders-fast cssClass="bg-blue-500 h-20 p-2 rounded shadow">
+    <span>On Hover button</span>
+  </shared-heavy-loaders-fast>
+  } @placeholder {
+  <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
+    Hover button to load
+  </div>
+  }
+</section>
 
-  <section>
-    <hr class="my-2" />
+<section>
+  <hr class="my-2" />
 
-    @defer (on immediate) {
-    <shared-heavy-loaders-fast cssClass="bg-blue-500 h-20 p-2 rounded shadow">
-      <span>On Immediate</span>
-    </shared-heavy-loaders-fast>
-    } @placeholder {
-    <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
-      Hover button to load
-    </div>
-    }
-  </section>
+  @defer (on immediate) {
+  <shared-heavy-loaders-fast cssClass="bg-blue-500 h-20 p-2 rounded shadow">
+    <span>On Immediate</span>
+  </shared-heavy-loaders-fast>
+  } @placeholder {
+  <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
+    Hover button to load
+  </div>
+  }
+</section>
 
-  <section>
-    <hr class="my-2" />
+<section>
+  <hr class="my-2" />
 
-    @defer (on timer(3000)) {
-    <shared-heavy-loaders-fast cssClass="bg-green-500 h-20 p-2 rounded shadow">
-      <span>On Timer - 3000ms</span>
-    </shared-heavy-loaders-fast>
-    } @placeholder {
-    <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
-      Wait 3000ms to load
-    </div>
-    }
-  </section>
+  @defer (on timer(3000)) {
+  <shared-heavy-loaders-fast cssClass="bg-green-500 h-20 p-2 rounded shadow">
+    <span>On Timer - 3000ms</span>
+  </shared-heavy-loaders-fast>
+  } @placeholder {
+  <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">
+    Wait 3000ms to load
+  </div>
+  }
+</section>
 
-  <section>
-    <hr class="my-2" />
+<section>
+  <hr class="my-2" />
 
-    <!-- when browser is idle, it will preload code to execute later on hover-->
-    @defer (on hover; prefetch on idle) {
-    <shared-heavy-loaders-fast cssClass="bg-green-500 h-20 p-2 rounded shadow">
-      <span>On Hover, On Iddle - preload code to execute when hover</span>
-    </shared-heavy-loaders-fast>
-    } @placeholder {
-    <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">Hover</div>
-    }
-  </section>
-</div>
+  <!-- when browser is idle, it will preload code to execute later on hover-->
+  @defer (on hover; prefetch on idle) {
+  <shared-heavy-loaders-fast cssClass="bg-green-500 h-20 p-2 rounded shadow">
+    <span>On Hover, On Iddle - preload code to execute when hover</span>
+  </shared-heavy-loaders-fast>
+  } @placeholder {
+  <div class="w-full h-20 bg bg-purple-100 p-2 rounded shadow">Hover</div>
+  }
+</section>
