@@ -15,5 +15,5 @@ export class SidemenuComponent {
     .map((route) => route.children ?? [])
     .flat()
     .filter((route) => route.path !== '**')
-    .filter((route) => !route.path?.includes('user/:id'));
+    .filter((route) => !route.path?.includes('users/:id'));
 }
